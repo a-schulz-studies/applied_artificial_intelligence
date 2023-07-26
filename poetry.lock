@@ -1938,6 +1938,25 @@ files = [
 ]
 
 [[package]]
+name = "python-utils"
+version = "3.7.0"
+description = "Python Utils is a module with some convenient utilities not included with the standard Python install"
+optional = false
+python-versions = ">3.8.0"
+files = [
+    {file = "python-utils-3.7.0.tar.gz", hash = "sha256:1970468fff1c0adbd60b9a751e6a786223a9f0373c954571912d9cf4be49b552"},
+    {file = "python_utils-3.7.0-py2.py3-none-any.whl", hash = "sha256:e31c1187168c314c984932e99c2d3f973465443493869ae041dd9e2e18e998aa"},
+]
+
+[package.dependencies]
+typing-extensions = ">3.10.0.2"
+
+[package.extras]
+docs = ["mock", "python-utils", "sphinx"]
+loguru = ["loguru"]
+tests = ["flake8", "loguru", "pytest", "pytest-asyncio", "pytest-cov", "pytest-mypy", "sphinx", "types-setuptools"]
+
+[[package]]
 name = "pytz"
 version = "2023.3"
 description = "World timezone definitions, modern and historical"
@@ -2683,6 +2702,17 @@ docs = ["myst-parser", "pydata-sphinx-theme", "sphinx"]
 test = ["argcomplete (>=2.0)", "pre-commit", "pytest", "pytest-mock"]
 
 [[package]]
+name = "typing-extensions"
+version = "4.7.1"
+description = "Backported and Experimental Type Hints for Python 3.7+"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "typing_extensions-4.7.1-py3-none-any.whl", hash = "sha256:440d5dd3af93b060174bf433bccd69b0babc3b15b1a8dca43789fd7f61514b36"},
+    {file = "typing_extensions-4.7.1.tar.gz", hash = "sha256:b75ddc264f0ba5615db7ba217daeb99701ad295353c45f9e95963337ceeeffb2"},
+]
+
+[[package]]
 name = "tzdata"
 version = "2023.3"
 description = "Provider of IANA time zone data"
@@ -2791,4 +2821,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "1f97657fe65b2ccda79561063267c691fd832b431b9dfcbfb2587fb47974fa8f"
+content-hash = "101a6b15bd88fc89d1d3184cc9f27d73c48a6f7a1cf65c49211f117e33e3d220"
