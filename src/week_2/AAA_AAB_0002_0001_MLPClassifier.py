@@ -9,7 +9,9 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import balanced_accuracy_score
 
-csvFile = pd.read_csv('winequality-red.csv')
+path = "/home/a-schulz/Projects/applied_artificial_intelligence/src/week_2/datasets/winequality-red.csv"
+
+csvFile = pd.read_csv(path)
 
 # print(csvFile)
 
@@ -25,10 +27,10 @@ X = dfX.values
 Y = csvFile['quality'].values
 
 print(set(Y))
-
+print(csvFile)
 numsMe = np.random.permutation(csvFile.shape[0])
 _thresh = int(np.floor(csvFile.shape[0]*.8))
-
+print("Shuffled")
 print(numsMe)
 print(_thresh)
 
